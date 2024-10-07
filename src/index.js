@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App'; // Main component of the application
+import index from './index.css'
 
 
 

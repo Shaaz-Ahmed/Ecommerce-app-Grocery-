@@ -1,11 +1,12 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import React from 'react';
 
 function App () {
-  return(
+  return (
     <>
-      <h1>E-commerce app using react js</h1>
+      <h1>Hello ecommerce</h1>
     </>
-  )
-};
+  );
+}
 
 export default App;
