@@ -1,9 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
+import App from './App'; // Main component of the application
 
-ReactDOM.render(
-  <>
-    <h1>Hello World Check check Grocery App</h1>
-  </>,
-  document.getElementById("root")
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
+
+
