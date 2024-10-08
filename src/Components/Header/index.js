@@ -31,8 +31,7 @@ const Header = () => {
                             <div className="col-sm-10 d-flex align-items-center part2">
                                 <CountryDropDown />
 
-                                {/* Added margin-left directly to the input-group */}
-                                <div className="headerSearch d-flex align-items-center ml-3"> {/* Removed mr-3 */}
+                                <div className="headerSearch d-flex align-items-center ml-3">
                                     <div className="input-group" style={{ width: '450px', height: '50px' }}>
                                         <input 
                                             type="text" 
@@ -60,47 +59,49 @@ const Header = () => {
                                         </div>
                                     </div>
                                 </div>
-                                {/* Header search end here  */}
 
                                 <div className='part3 d-flex align-items-center ml-auto'>
-                                    <Button 
-                                        className="circle" 
+                                <Button 
+    className="circle" 
+    style={{ 
+        width: '100px', // Equal width for a perfect circle
+        height: '30px', // Equal height for a perfect circle
+        border: '2px solid rgba(173, 216, 230, 0.1)',
+        backgroundColor: '#233a95', // Background color set to #233a95
+        display: 'flex', // Center the icon
+        justifyContent: 'center', // Center the icon horizontally
+        alignItems: 'center', // Center the icon vertically
+        padding: '0', // Ensure no padding affects the circle shape
+        margin: '0' // Ensure no margin affects the circle shape
+    }} 
+>
+    <FiUser style={{ fontSize: '20px', color: 'white' }} /> {/* Icon color set to white */}
+</Button>
+
+
+                                    <div className='ml-auto'> 
+                                        <span className='price'> $3.29</span>
+                                    </div>
+
+                                    <Button  
+                                        className="circle1" 
                                         style={{ 
                                             width: '60px', // Equal width for a perfect circle
                                             height: '60px', // Equal height for a perfect circle
-                                            // border: '1px solid #ced4da', // Border color
-                                            borderRadius: '60%', // Make it a perfect circle
-                                            backgroundColor: 'rgba(173, 216, 230, 0.1)',  
+                                            border: '2px solid rgba(173, 216, 230, 0.1)',
+                                            borderRadius: '50%', // Make it a perfect circle
+                                           backgroundColor: 'rgba(217, 202, 202, 0.1)',
+
                                             display: 'flex', // Center the icon
                                             justifyContent: 'center', // Center the icon horizontally
                                             alignItems: 'center', // Center the icon vertically
                                             padding: '0', // Ensure no padding affects the circle shape
                                             margin: '0' // Ensure no margin affects the circle shape
                                         }} 
-                                    >
-                                        <FiUser style={{ fontSize: '20px' }} /> {/* Increase icon size here */}
+                                    > 
+                                        <BiCartAdd style={{ fontSize: '20px' }} /> 
                                     </Button>
-
-                                    <div className='ml-auto'> 
-                                            <span className='price'> $3.29</span>
-                                            
-                                    </div>
-
-                                    <Button  className="circle1" 
-                                        style={{ 
-                                            width: '60px', // Equal width for a perfect circle
-                                            height: '60px', // Equal height for a perfect circle
-                                            // border: '1px solid #ced4da', // Border color
-                                            borderRadius: '60%', // Make it a perfect circle
-                                            backgroundColor: 'rgba(173, 216, 230, 0.1)',   
-                                            display: 'flex', // Center the icon
-                                            justifyContent: 'center', // Center the icon horizontally
-                                            alignItems: 'center', // Center the icon vertically
-                                            padding: '0', // Ensure no padding affects the circle shape
-                                            margin: '0' // Ensure no margin affects the circle shape
-                                        }} > <BiCartAdd  style={{ fontSize: '20px' }} /> </Button>
                                 </div>
-
                             </div>
                         </div>
                     </div>
