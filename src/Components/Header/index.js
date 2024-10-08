@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import CountryDropDown from '../CountryDropDown';
 import { IoSearch } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
+import { BiCartAdd } from "react-icons/bi";
 
 const Header = () => {
     return (
@@ -67,9 +68,9 @@ const Header = () => {
                                         style={{ 
                                             width: '60px', // Equal width for a perfect circle
                                             height: '60px', // Equal height for a perfect circle
-                                            border: '1px solid #ced4da', // Border color
+                                            // border: '1px solid #ced4da', // Border color
                                             borderRadius: '60%', // Make it a perfect circle
-                                            backgroundColor: 'white', // Background color
+                                            backgroundColor: 'rgba(173, 216, 230, 0.1)',  
                                             display: 'flex', // Center the icon
                                             justifyContent: 'center', // Center the icon horizontally
                                             alignItems: 'center', // Center the icon vertically
@@ -77,8 +78,27 @@ const Header = () => {
                                             margin: '0' // Ensure no margin affects the circle shape
                                         }} 
                                     >
-                                        <FiUser style={{ fontSize: '24px' }} /> {/* Increase icon size here */}
+                                        <FiUser style={{ fontSize: '20px' }} /> {/* Increase icon size here */}
                                     </Button>
+
+                                    <div className='ml-auto'> 
+                                            <span className='price'> $3.29</span>
+                                            
+                                    </div>
+
+                                    <Button  className="circle1" 
+                                        style={{ 
+                                            width: '60px', // Equal width for a perfect circle
+                                            height: '60px', // Equal height for a perfect circle
+                                            // border: '1px solid #ced4da', // Border color
+                                            borderRadius: '60%', // Make it a perfect circle
+                                            backgroundColor: 'rgba(173, 216, 230, 0.1)',   
+                                            display: 'flex', // Center the icon
+                                            justifyContent: 'center', // Center the icon horizontally
+                                            alignItems: 'center', // Center the icon vertically
+                                            padding: '0', // Ensure no padding affects the circle shape
+                                            margin: '0' // Ensure no margin affects the circle shape
+                                        }} > <BiCartAdd  style={{ fontSize: '20px' }} /> </Button>
                                 </div>
 
                             </div>
