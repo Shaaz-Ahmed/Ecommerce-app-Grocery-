@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import Button from '@mui/material/Button';
 import { IoMdMenu } from "react-icons/io";
 import { FaAngleDown } from "react-icons/fa6";
+import { CiHome } from "react-icons/ci";
 
 const Navigation = () => {
     return (
@@ -25,7 +26,7 @@ const Navigation = () => {
                         {/* Done with the category components */}
                         <div className='col-9 navPart2 navPart2 d-flex align-items-center'> {/* Adjusted className to 'col-9' */}
                             <ul className='list list-inline ml-auto'>
-                                <li className='list-inline-item'><Link to='/'>Home</Link></li>
+                                <li className='list-inline-item'><Link to='/'> <CiHome /> &nbsp;Home</Link></li>
                                 <li className='list-inline-item'><Link to='/'>Fashion</Link></li>
                                 <li className='list-inline-item'><Link to='/'>Electronic</Link></li>
                                 <li className='list-inline-item'><Link to='/'>Bakery</Link></li>
