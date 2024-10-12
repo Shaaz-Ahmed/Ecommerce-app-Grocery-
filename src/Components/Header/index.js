@@ -86,24 +86,26 @@ const Header = () => {
                                         <span className='price'> $3.29</span>
                                     </div>
 
-                                    <Button  
+                                 <Button  
     className="circle1" 
     style={{ 
-        width: '60px', // Equal width for a perfect circle
-        height: '60px', // Equal height for a perfect circle
-        border: '2px solid rgba(173, 216, 230, 0.1)',
-        borderRadius: '50%', // Make it a perfect circle
-        backgroundColor: 'rgba(217, 202, 202, 0.1)',
-
+        // width: '60px', // Width for a perfect circle
+        height: '60px', // Height for a perfect circle
+        // border: '2px solid #233a95', // Border color set to #233a95
+        // borderRadius: '50%', // Make it a perfect circle
+        // backgroundColor: '#f0f0f0', // Light white-grey background color
         display: 'flex', // Center the icon
         justifyContent: 'center', // Center the icon horizontally
         alignItems: 'center', // Center the icon vertically
-        padding: '0', // Ensure no padding affects the circle shape
-        margin: '0' // Ensure no margin affects the circle shape
+        padding: '0', // Ensure no padding affects the circle
+        margin: '0' // Ensure no margin affects the circle
     }} 
 > 
-    <BiCartAdd style={{ fontSize: '30px' }} /> {/* Increased font size to 30px */}
+    <BiCartAdd style={{ fontSize: '30px', color: '#233a95' }} /> &nbsp;  CART {/* Icon color set to #233a95 */}
 </Button>
+
+
+
 
                                 </div>
                             </div>
