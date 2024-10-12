@@ -4,7 +4,7 @@ import { FaAngleDown } from "react-icons/fa6";
 import Dialog from '@mui/material/Dialog'; // Import Dialog
 import DialogTitle from '@mui/material/DialogTitle';
 import { IoSearch } from "react-icons/io5";
-
+import { MdClose } from "react-icons/md";
 
 const CountryDropDown = () => {
     return (
@@ -29,7 +29,17 @@ const CountryDropDown = () => {
             <Dialog open={true} className='locationModal'>
                 <h4>Choose your Delivery Location</h4>
                 <p>Enter your address and we will specify the offer of your area</p>
-
+                <Button 
+                className='close_' 
+                style={{ 
+                    position: 'absolute', 
+                    top: '10px', 
+                    right: '10px', 
+                    zIndex: 10 // Ensures it stays above other elements
+                }}
+            >
+                <MdClose />
+            </Button>
                 {/* search box code  start*/}
                 <div className="headerSearch d-flex align-items-center ml-3">
                                     <div className="input-group" style={{ width: '450px', height: '50px' }}>

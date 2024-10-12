@@ -7,6 +7,7 @@ body{ font-family: "Lato" , sans-serif ; font-size: 14px;}
     color: #fff; /* Text color */
 }
 
+ /* made dropdown proper scrollable */
 ::-webkit-scrollbar{width: 8px !important; height: 8px !important; }
 ::-webkit-scrollbar-thumb{background: #ccc !important;}
 ::-webkit-scrollbar-track{background: transparent !important;}
@@ -45,13 +46,11 @@ width: 40px !important; border-radius: 50% !important; border: 1px solid rgba(0,
 }
 
 /* style for location drop down */
-.locationModal .MuiPaper-elevation{padding: 25px;}
+.locationModal .MuiPaper-elevation{padding: 25px; position: relative;}
 .locationModal .countryList{margin-bottom: 0px; max-height: 400px; overflow-y: scroll; overflow-x: hidden;}
 .locationModal .countryList li{width: 100%; list-style: none;}
 .locationModal .countryList li button{width: 100%; text-transform: capitalize !important; color: #000 !important;
 justify-content: flex-start !important; padding: 10px 20px; }
-
-
 
 
 nav .allCatTab{background: #2bbef9; padding: 10px 20px !important; border-radius: 30px !important; }
