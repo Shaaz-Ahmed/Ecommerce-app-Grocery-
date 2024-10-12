@@ -6,6 +6,8 @@ import CountryDropDown from '../CountryDropDown';
 import { IoSearch } from "react-icons/io5";
 import { FiUser } from "react-icons/fi";
 import { BiCartAdd } from "react-icons/bi";
+import SearchBox from './SearchBox';
+import Navigation from './Navigation';
 
 const Header = () => {
     return (
@@ -30,7 +32,8 @@ const Header = () => {
 
                             <div className="col-sm-10 d-flex align-items-center part2">
                                 <CountryDropDown />
-
+                                <SearchBox />
+{/* 
                                 <div className="headerSearch d-flex align-items-center ml-3">
                                     <div className="input-group" style={{ width: '450px', height: '50px' }}>
                                         <input 
@@ -58,7 +61,7 @@ const Header = () => {
                                             </span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
 
                                 <div className='part3 d-flex align-items-center ml-auto'>
                                 <Button 
@@ -84,29 +87,32 @@ const Header = () => {
                                     </div>
 
                                     <Button  
-                                        className="circle1" 
-                                        style={{ 
-                                            width: '60px', // Equal width for a perfect circle
-                                            height: '60px', // Equal height for a perfect circle
-                                            border: '2px solid rgba(173, 216, 230, 0.1)',
-                                            borderRadius: '50%', // Make it a perfect circle
-                                           backgroundColor: 'rgba(217, 202, 202, 0.1)',
+    className="circle1" 
+    style={{ 
+        width: '60px', // Equal width for a perfect circle
+        height: '60px', // Equal height for a perfect circle
+        border: '2px solid rgba(173, 216, 230, 0.1)',
+        borderRadius: '50%', // Make it a perfect circle
+        backgroundColor: 'rgba(217, 202, 202, 0.1)',
 
-                                            display: 'flex', // Center the icon
-                                            justifyContent: 'center', // Center the icon horizontally
-                                            alignItems: 'center', // Center the icon vertically
-                                            padding: '0', // Ensure no padding affects the circle shape
-                                            margin: '0' // Ensure no margin affects the circle shape
-                                        }} 
-                                    > 
-                                        <BiCartAdd style={{ fontSize: '20px' }} /> 
-                                    </Button>
+        display: 'flex', // Center the icon
+        justifyContent: 'center', // Center the icon horizontally
+        alignItems: 'center', // Center the icon vertically
+        padding: '0', // Ensure no padding affects the circle shape
+        margin: '0' // Ensure no margin affects the circle shape
+    }} 
+> 
+    <BiCartAdd style={{ fontSize: '30px' }} /> {/* Increased font size to 30px */}
+</Button>
+
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <Navigation />
         </>
     );
 };
