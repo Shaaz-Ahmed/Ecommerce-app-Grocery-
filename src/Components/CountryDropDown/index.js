@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import Button from '@mui/material/Button';
 import { FaAngleDown } from "react-icons/fa6";
@@ -29,7 +30,7 @@ const CountryDropDown = () => {
                 </span>
             </Button>
 
-            <Dialog open={isOpenModal} onClose={() => setIsOpenModel(false)} className='locationModal'>
+            <Dialog open={isOpenModal} onClose={()=>setIsOpenModel(false)} className='locationModal'>
                 <DialogTitle>
                     <h4>Choose your Delivery Location</h4>
                     <Button 
@@ -80,13 +81,19 @@ const CountryDropDown = () => {
                 </div>
                 {/* Search Box Code End */}
 
-                {/* Country List Data Start */}
+                {/* Country List Data Star t */}
                 <ul className='countryList mt-3'>
-                    {['India', 'Pakistan', 'SriLanka', 'Bangladesh' , 'India', 'Pakistan', 'SriLanka', 'Bangladesh'].map(country => (
-                        <li key={country}>
-                            <Button>{country}</Button>
-                        </li>
-                    ))}
+                      <li><Button onClick={()=> setIsOpenModel(false)}>India</Button></li>
+                      <li><Button onClick={()=> setIsOpenModel(false)}>Pakistan</Button></li>
+                      <li><Button onClick={()=> setIsOpenModel(false)}>Bangladesh</Button></li>
+                      <li><Button onClick={()=> setIsOpenModel(false)}>Afganistan</Button></li>
+                      <li><Button onClick={()=> setIsOpenModel(false)}>Thailand</Button></li>
+                      <li><Button onClick={()=> setIsOpenModel(false)}>Singapore</Button></li>
+                      <li><Button onClick={()=> setIsOpenModel(false)}>Nepal</Button></li>
+                      <li><Button onClick={()=> setIsOpenModel(false)}>Korea</Button></li>
+                      <li><Button onClick={()=> setIsOpenModel(false)}>China</Button></li>
+                     
+
                 </ul>
                 {/* Country List Data Ends Here */}
             </Dialog>
