@@ -16,6 +16,7 @@ const Navigation = () => {
                             </Button>
                         </div>
 
+                {/* Done with the category components */}
                         <div>
 
                         </div>
