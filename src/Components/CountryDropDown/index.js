@@ -60,6 +60,29 @@ const CountryDropDown = () => {
                                     </div>
                                 </div>
                 {/* search box code end */}
+
+
+                {/* county list data start from here  */}
+                   
+                   <ul className='countryList mt-3'>
+                        <li><Button>India</Button></li>
+                        <li><Button>Pakistan</Button></li>
+                        <li><Button>SriLanka</Button></li>
+                        <li><Button>Bangladesh</Button></li>
+                        <li><Button>India</Button></li>
+                        <li><Button>Pakistan</Button></li>
+                        <li><Button>SriLanka</Button></li>
+                        <li><Button>Bangladesh</Button></li>
+                        <li><Button>India</Button></li>
+                        <li><Button>Pakistan</Button></li>
+                        <li><Button>SriLanka</Button></li>
+                        <li><Button>Bangladesh</Button></li>
+                        <li><Button>India</Button></li>
+                        <li><Button>Pakistan</Button></li>
+                        <li><Button>SriLanka</Button></li>
+                        <li><Button>Bangladesh</Button></li>
+                   </ul>
+                {/* country list data ends here */}
             </Dialog>
         </>
     );
