@@ -39,7 +39,7 @@ width: 40px !important; border-radius: 50% !important; border: 1px solid rgba(0,
     margin-right: 30px;
 }
 
-nav .allCatTab{background: #2bbef9; padding: 8px 20px !important; border-radius: 30px !important; }
+nav .allCatTab{background: #2bbef9; padding: 10px 20px !important; border-radius: 30px !important; }
 nav .allCatTab *{color: #fff;}
 nav .allCatTab:hover{background: #2bbef9;}
 nav .allCatTab .text{font-weight: 600;}
