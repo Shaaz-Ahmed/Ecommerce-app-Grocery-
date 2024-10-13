@@ -34,7 +34,12 @@ const Navigation = () => {
                                     <Link to='/'>Watches</Link>
                                     </div>
                                 </li>
-                                <li className='list-inline-item'><Link to='/'>Women</Link></li>
+                                <li className='list-inline-item'><Link to='/'>Women</Link>
+                                <div className='submenu shadow'>
+                                    <Link to='/'>Clothing</Link>
+                                    <Link to='/'>Footwares</Link>
+                                    <Link to='/'>Watches</Link>
+                                    </div></li>
                                 <li className='list-inline-item'><Link to='/'>Beauty</Link></li>
                                 <li className='list-inline-item'><Link to='/'>Watches</Link></li>
                                 <li className='list-inline-item'><Link to='/'>Kids</Link></li>
