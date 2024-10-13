@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import Button from '@mui/material/Button';
@@ -8,8 +8,11 @@ import { FiUser } from "react-icons/fi";
 import { BiCartAdd } from "react-icons/bi";
 import SearchBox from './SearchBox';
 import Navigation from './Navigation';
+import { MyContext } from '../../App';
 
 const Header = () => {
+
+    const context = useContext(MyContext);
     return (
         <>
             <div className='headerwrapper'>
@@ -31,7 +34,10 @@ const Header = () => {
                             </div>
 
                             <div className="col-sm-10 d-flex align-items-center part2">
-                                <CountryDropDown />
+                            {
+                                context.countryList.length !==0 && <CountryDropDown />
+                            }
+                                
                                 <SearchBox />
 {/* 
                                 <div className="headerSearch d-flex align-items-center ml-3">

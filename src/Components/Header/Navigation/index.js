@@ -27,11 +27,17 @@ const Navigation = () => {
                         <div className='col-9 navPart2 navPart2 d-flex align-items-center'> {/* Adjusted className to 'col-9' */}
                             <ul className='list list-inline ml-auto'>
                                 <li className='list-inline-item'><Link to='/'> <CiHome /> &nbsp;Home</Link></li>
-                                <li className='list-inline-item'><Link to='/'>Fashion</Link></li>
-                                <li className='list-inline-item'><Link to='/'>Electronic</Link></li>
-                                <li className='list-inline-item'><Link to='/'>Bakery</Link></li>
-                                <li className='list-inline-item'><Link to='/'>Grocery</Link></li>
-                                <li className='list-inline-item'><Link to='/'>Blog</Link></li>
+                                <li className='list-inline-item'><Link to='/'>Mens</Link>
+                                    <div className='submenu shadow'>
+                                    <Link to='/'>Clothing</Link>
+                                    <Link to='/'>Footwares</Link>
+                                    <Link to='/'>Watches</Link>
+                                    </div>
+                                </li>
+                                <li className='list-inline-item'><Link to='/'>Women</Link></li>
+                                <li className='list-inline-item'><Link to='/'>Beauty</Link></li>
+                                <li className='list-inline-item'><Link to='/'>Watches</Link></li>
+                                <li className='list-inline-item'><Link to='/'>Kids</Link></li>
                                 <li className='list-inline-item'><Link to='/'>Contact us</Link></li>
                             </ul>
                         </div>

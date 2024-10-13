@@ -1,19 +1,37 @@
-
-import React, { useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react'; // Added useEffect
 import Button from '@mui/material/Button';
 import { FaAngleDown } from "react-icons/fa6";
 import Dialog from '@mui/material/Dialog'; // Import Dialog
 import DialogTitle from '@mui/material/DialogTitle';
 import { IoSearch } from "react-icons/io5";
 import { MdClose } from "react-icons/md";
+import axios from 'axios'; // Import axios
+import { MyContext } from '../../App';
 
 const CountryDropDown = () => {
-    const [isOpenModal, setIsOpenModel] = useState(false); // Corrected state variable name
+    const [isOpenModal, setIsOpenModal] = useState(false); // Corrected state variable name
+    const [countryList, setCountryList] = useState([]); // Local state for country list
+    const context = useContext(MyContext);
+
+    // Fetching country list from API
+    useEffect(() => {
+        const fetchCountries = async () => {
+            try {
+                const response = await axios.get('https://restcountries.com/v3.1/all'); // API endpoint to get countries
+                const countries = response.data.map(country => ({ name: country.name.common })); // Map to get country names
+                setCountryList(countries);
+            } catch (error) {
+                console.error('Error fetching countries:', error);
+            }
+        };
+
+        fetchCountries();
+    }, []); // Empty dependency array to run only once when the component mounts
 
     return (
         <>
             <Button 
-                onClick={() => setIsOpenModel(true)} // Fixed setIsOpenModel function
+                onClick={() => setIsOpenModal(true)} // Fixed setIsOpenModal function
                 className="countryDrop d-flitems-center" 
                 style={{ height: '50px', border: '1px solid #ced4da', borderRadius: '0.25rem', marginRight: '10px' }}
             >
@@ -30,12 +48,12 @@ const CountryDropDown = () => {
                 </span>
             </Button>
 
-            <Dialog open={isOpenModal} onClose={()=>setIsOpenModel(false)} className='locationModal'>
+            <Dialog open={isOpenModal} onClose={() => setIsOpenModal(false)} className='locationModal'>
                 <DialogTitle>
                     <h4>Choose your Delivery Location</h4>
                     <Button 
                         className='close_'  
-                        onClick={() => setIsOpenModel(false)} // Closing dialog
+                        onClick={() => setIsOpenModal(false)} // Closing dialog
                         style={{ 
                             position: 'absolute', 
                             top: '10px', 
@@ -81,19 +99,17 @@ const CountryDropDown = () => {
                 </div>
                 {/* Search Box Code End */}
 
-                {/* Country List Data Star t */}
+                {/* Country List Data Start */}
                 <ul className='countryList mt-3'>
-                      <li><Button onClick={()=> setIsOpenModel(false)}>India</Button></li>
-                      <li><Button onClick={()=> setIsOpenModel(false)}>Pakistan</Button></li>
-                      <li><Button onClick={()=> setIsOpenModel(false)}>Bangladesh</Button></li>
-                      <li><Button onClick={()=> setIsOpenModel(false)}>Afganistan</Button></li>
-                      <li><Button onClick={()=> setIsOpenModel(false)}>Thailand</Button></li>
-                      <li><Button onClick={()=> setIsOpenModel(false)}>Singapore</Button></li>
-                      <li><Button onClick={()=> setIsOpenModel(false)}>Nepal</Button></li>
-                      <li><Button onClick={()=> setIsOpenModel(false)}>Korea</Button></li>
-                      <li><Button onClick={()=> setIsOpenModel(false)}>China</Button></li>
-                     
-
+                    {
+                        countryList.length !== 0 && countryList.map((item, index) => {
+                            return (
+                                <li key={index}>
+                                    <Button onClick={() => setIsOpenModal(false)}>{item.name}</Button>
+                                </li>
+                            )
+                        })
+                    }
                 </ul>
                 {/* Country List Data Ends Here */}
             </Dialog>
