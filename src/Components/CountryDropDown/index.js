@@ -14,7 +14,7 @@ const CountryDropDown = () => {
         <>
             <Button 
                 onClick={() => setIsOpenModel(true)} // Fixed setIsOpenModel function
-                className="countryDrop d-flex align-items-center" 
+                className="countryDrop d-flitems-center" 
                 style={{ height: '50px', border: '1px solid #ced4da', borderRadius: '0.25rem', marginRight: '10px' }}
             >
                 <div className="info d-flex flex-column text-left mr-2">
