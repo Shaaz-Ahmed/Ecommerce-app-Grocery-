@@ -2,9 +2,9 @@ import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.png';
 import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography'; // Import Typography component
 import CountryDropDown from '../CountryDropDown';
-import { IoSearch } from "react-icons/io5";
-import { FiUser } from "react-icons/fi";
 import { BiCartAdd } from "react-icons/bi";
 import SearchBox from './SearchBox';
 import Navigation from './Navigation';
@@ -13,11 +13,8 @@ import { MyContext } from '../../App';
 const Header = () => {
     const context = useContext(MyContext);
 
-    // Function to handle adding an item to the cart
     const handleAddToCart = () => {
-        // Implement your logic for adding items to the cart here
         console.log("Item added to cart");
-        // You can also update state or context to reflect the added item
     };
 
     return (
@@ -33,62 +30,52 @@ const Header = () => {
 
                 <div className="header">
                     <div className="container">
-                        <div className="row">
-                            <div className="logowrapper d-flex align-items-center col-sm-2">
-                                <Link to={'/'}>
-                                    <img src={logo} alt='logo' />
-                                </Link>
-                            </div>
+                        <Grid container alignItems="center" justifyContent="space-between" spacing={2}>
+                            <Grid item xs={6} sm={2}>
+                                <div className="logowrapper d-flex align-items-center">
+                                    <Link to={'/'}>
+                                        <img src={logo} alt='logo' style={{ width: '100%', maxWidth: '150px' }} />
+                                    </Link>
+                                </div>
+                            </Grid>
 
-                            <div className="col-sm-10 d-flex align-items-center part2">
-                                {
-                                    context.countryList.length !== 0 && <CountryDropDown />
-                                }
-
+                            <Grid item xs={12} sm={8} className="d-flex align-items-center part2">
+                                {context.countryList.length !== 0 && <CountryDropDown />}
                                 <SearchBox />
 
                                 <div className='part3 d-flex align-items-center ml-auto'>
-                                    <Button 
-                                        className="circle" 
-                                        style={{ 
-                                            width: '100px', // Equal width for a perfect circle
-                                            height: '30px', // Equal height for a perfect circle
-                                            border: '2px solid rgba(173, 216, 230, 0.1)',
-                                            backgroundColor: '#233a95', // Background color set to #233a95
-                                            display: 'flex', // Center the icon
-                                            justifyContent: 'center', // Center the icon horizontally
-                                            alignItems: 'center', // Center the icon vertically
-                                            padding: '0', // Ensure no padding affects the circle shape
-                                            margin: '0' // Ensure no margin affects the circle shape
-                                        }} 
+                                    <Typography
+                                        variant="h6"
+                                        className="responsive-login"
+                                        style={{ fontFamily: 'Arial', color: '#6c757d', textAlign: 'center' }}
                                     >
-                                        <FiUser style={{ fontSize: '20px', color: 'white' }} /> {/* Icon color set to white */}
-                                    </Button>
+                                        Login
+                                    </Typography>
+                                </div>
+                            </Grid>
 
-                                    <div className='ml-auto'> 
-                                        <span className='price'> $3.29</span>
-                                    </div>
-
-                                    <Button  
-                                        className="circle1" 
-                                        style={{ 
-                                            height: '60px', // Height for the button
-                                            backgroundColor: '#233a95', // Background color for the button
-                                            display: 'flex', // Center the icon and text
-                                            justifyContent: 'center', // Center the icon horizontally
-                                            alignItems: 'center', // Center the icon vertically
-                                            padding: '10px', // Add padding for better spacing
-                                            margin: '0', // Ensure no margin affects the button
-                                            borderRadius: '5px' // Optional: add some border radius for a smoother look
-                                        }} 
-                                        onClick={handleAddToCart} // Function to handle cart addition
-                                    > 
-                                        <BiCartAdd style={{ fontSize: '30px', color: 'white' }} /> {/* Icon color set to white */}
-                                        <span style={{ marginLeft: '8px', fontSize: '16px', color: 'white' }}>CART</span> {/* Improved text appearance */}
+                            <Grid item xs={6} sm={2} className="d-flex align-items-center justify-content-end">
+                                <div className="ml-auto d-flex align-items-center">
+                                    <Button
+                                        className="circle1"
+                                        style={{
+                                            height: '40px',
+                                            backgroundColor: '#233a95',
+                                            display: 'flex',
+                                            justifyContent: 'center',
+                                            alignItems: 'center',
+                                            padding: '10px',
+                                            margin: '0',
+                                            borderRadius: '5px'
+                                        }}
+                                        onClick={handleAddToCart}
+                                    >
+                                        <BiCartAdd style={{ fontSize: '25px', color: 'white' }} />
+                                        <span style={{ marginLeft: '8px', fontSize: '16px', color: 'white' }}>CART</span>
                                     </Button>
                                 </div>
-                            </div>
-                        </div>
+                            </Grid>
+                        </Grid>
                     </div>
                 </div>
             </div>
