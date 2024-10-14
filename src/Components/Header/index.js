@@ -11,8 +11,15 @@ import Navigation from './Navigation';
 import { MyContext } from '../../App';
 
 const Header = () => {
-
     const context = useContext(MyContext);
+
+    // Function to handle adding an item to the cart
+    const handleAddToCart = () => {
+        // Implement your logic for adding items to the cart here
+        console.log("Item added to cart");
+        // You can also update state or context to reflect the added item
+    };
+
     return (
         <>
             <div className='headerwrapper'>
@@ -34,85 +41,51 @@ const Header = () => {
                             </div>
 
                             <div className="col-sm-10 d-flex align-items-center part2">
-                            {
-                                context.countryList.length !==0 && <CountryDropDown />
-                            }
-                                
+                                {
+                                    context.countryList.length !== 0 && <CountryDropDown />
+                                }
+
                                 <SearchBox />
-{/* 
-                                <div className="headerSearch d-flex align-items-center ml-3">
-                                    <div className="input-group" style={{ width: '450px', height: '50px' }}>
-                                        <input 
-                                            type="text" 
-                                            className="form-control" 
-                                            placeholder="Search items" 
-                                            aria-label="Search items"
-                                            style={{ 
-                                                backgroundColor: '#f3f4f7', 
-                                                height: '50px',
-                                                border: '1px solid #ced4da',
-                                                borderRight: 'none',
-                                                borderRadius: '0.25rem 0 0 0.25rem'
-                                            }}
-                                        />
-                                        <div className="input-group-append">
-                                            <span className="input-group-text" style={{ 
-                                                backgroundColor: '#f3f4f7', 
-                                                height: '50px', 
-                                                border: '1px solid #ced4da', 
-                                                borderLeft: 'none', 
-                                                borderRadius: '0 0.25rem 0.25rem 0' 
-                                            }}>
-                                                <IoSearch />
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div> */}
 
                                 <div className='part3 d-flex align-items-center ml-auto'>
-                                <Button 
-    className="circle" 
-    style={{ 
-        width: '100px', // Equal width for a perfect circle
-        height: '30px', // Equal height for a perfect circle
-        border: '2px solid rgba(173, 216, 230, 0.1)',
-        backgroundColor: '#233a95', // Background color set to #233a95
-        display: 'flex', // Center the icon
-        justifyContent: 'center', // Center the icon horizontally
-        alignItems: 'center', // Center the icon vertically
-        padding: '0', // Ensure no padding affects the circle shape
-        margin: '0' // Ensure no margin affects the circle shape
-    }} 
->
-    <FiUser style={{ fontSize: '20px', color: 'white' }} /> {/* Icon color set to white */}
-</Button>
-
+                                    <Button 
+                                        className="circle" 
+                                        style={{ 
+                                            width: '100px', // Equal width for a perfect circle
+                                            height: '30px', // Equal height for a perfect circle
+                                            border: '2px solid rgba(173, 216, 230, 0.1)',
+                                            backgroundColor: '#233a95', // Background color set to #233a95
+                                            display: 'flex', // Center the icon
+                                            justifyContent: 'center', // Center the icon horizontally
+                                            alignItems: 'center', // Center the icon vertically
+                                            padding: '0', // Ensure no padding affects the circle shape
+                                            margin: '0' // Ensure no margin affects the circle shape
+                                        }} 
+                                    >
+                                        <FiUser style={{ fontSize: '20px', color: 'white' }} /> {/* Icon color set to white */}
+                                    </Button>
 
                                     <div className='ml-auto'> 
                                         <span className='price'> $3.29</span>
                                     </div>
 
-                                 <Button  
-    className="circle1" 
-    style={{ 
-        // width: '60px', // Width for a perfect circle
-        height: '60px', // Height for a perfect circle
-        // border: '2px solid #233a95', // Border color set to #233a95
-        // borderRadius: '50%', // Make it a perfect circle
-        // backgroundColor: '#f0f0f0', // Light white-grey background color
-        display: 'flex', // Center the icon
-        justifyContent: 'center', // Center the icon horizontally
-        alignItems: 'center', // Center the icon vertically
-        padding: '0', // Ensure no padding affects the circle
-        margin: '0' // Ensure no margin affects the circle
-    }} 
-> 
-    <BiCartAdd style={{ fontSize: '30px', color: '#233a95' }} /> &nbsp;  CART {/* Icon color set to #233a95 */}
-</Button>
-
-
-
-
+                                    <Button  
+                                        className="circle1" 
+                                        style={{ 
+                                            height: '60px', // Height for the button
+                                            backgroundColor: '#233a95', // Background color for the button
+                                            display: 'flex', // Center the icon and text
+                                            justifyContent: 'center', // Center the icon horizontally
+                                            alignItems: 'center', // Center the icon vertically
+                                            padding: '10px', // Add padding for better spacing
+                                            margin: '0', // Ensure no margin affects the button
+                                            borderRadius: '5px' // Optional: add some border radius for a smoother look
+                                        }} 
+                                        onClick={handleAddToCart} // Function to handle cart addition
+                                    > 
+                                        <BiCartAdd style={{ fontSize: '30px', color: 'white' }} /> {/* Icon color set to white */}
+                                        <span style={{ marginLeft: '8px', fontSize: '16px', color: 'white' }}>CART</span> {/* Improved text appearance */}
+                                    </Button>
                                 </div>
                             </div>
                         </div>

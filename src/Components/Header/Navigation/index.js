@@ -4,7 +4,6 @@ import Button from '@mui/material/Button';
 import { IoMdMenu } from "react-icons/io";
 import { FaAngleDown } from "react-icons/fa6";
 import { CiHome } from "react-icons/ci";
-import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import 'bootstrap/dist/css/bootstrap.min.css'; // Import Bootstrap CSS
 
@@ -12,7 +11,12 @@ const Navigation = () => {
     const [anchorEl, setAnchorEl] = useState(null);
 
     const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
+        // Toggle the dropdown menu
+        if (anchorEl) {
+            setAnchorEl(null); // Close the dropdown if it's already open
+        } else {
+            setAnchorEl(event.currentTarget); // Open the dropdown
+        }
     };
 
     const handleClose = () => {
@@ -47,7 +51,7 @@ const Navigation = () => {
                                     opacity: anchorEl ? '1' : '0',
                                     display: anchorEl ? 'block' : 'none',
                                     marginTop: '8px',
-                                    width: '250px', // Increased width here**
+                                    width: '250px', // Increased width here
                                 }}
                             >
                                 <MenuItem onClick={handleClose}>
@@ -63,19 +67,10 @@ const Navigation = () => {
                                     <Link to='/category4' className='dropdown-item'>Watches</Link>
                                 </MenuItem>
                                 <MenuItem onClick={handleClose}>
-                                    <Link to='/category4' className='dropdown-item'>Kids</Link>
+                                    <Link to='/category5' className='dropdown-item'>Kids</Link>
                                 </MenuItem>
                                 <MenuItem onClick={handleClose}>
-                                    <Link to='/category4' className='dropdown-item'>Gifts</Link>
-                                </MenuItem>
-                                <MenuItem onClick={handleClose}>
-                                    <Link to='/category4' className='dropdown-item'>Mens</Link>
-                                </MenuItem>
-                                <MenuItem onClick={handleClose}>
-                                    <Link to='/category4' className='dropdown-item'>Women</Link>
-                                </MenuItem>
-                                <MenuItem onClick={handleClose}>
-                                    <Link to='/category4' className='dropdown-item'>Watches</Link>
+                                    <Link to='/category6' className='dropdown-item'>Gifts</Link>
                                 </MenuItem>
                             </div>
                         </div>
@@ -90,17 +85,17 @@ const Navigation = () => {
                                 <li className='list-inline-item'>
                                     <Link to='/'>Mens</Link>
                                     <div className='submenu shadow'>
-                                        <Link to='/'>Clothing</Link>
-                                        <Link to='/'>Footwear</Link>
-                                        <Link to='/'>Watches</Link>
+                                        <Link to='/mens/clothing'>Clothing</Link>
+                                        <Link to='/mens/footwear'>Footwear</Link>
+                                        <Link to='/mens/watches'>Watches</Link>
                                     </div>
                                 </li>
                                 <li className='list-inline-item'>
                                     <Link to='/'>Women</Link>
                                     <div className='submenu shadow'>
-                                        <Link to='/'>Clothing</Link>
-                                        <Link to='/'>Footwear</Link>
-                                        <Link to='/'>Watches</Link>
+                                        <Link to='/womens/clothing'>Clothing</Link>
+                                        <Link to='/womens/footwear'>Footwear</Link>
+                                        <Link to='/womens/watches'>Watches</Link>
                                     </div>
                                 </li>
                                 <li className='list-inline-item'><Link to='/'>Beauty</Link></li>
