@@ -7,7 +7,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination'; // Swiper's pagination CSS
 import { Pagination } from 'swiper/modules'; // Correct import for Swiper's Pagination module
-import Rating from '@mui/material/Rating';
+import ProductItem from '../../Components/ProductItem';
+
 
 const Home = () => {
     var productSliderOptions = {
@@ -52,6 +53,10 @@ const Home = () => {
                                     className='mySwiper'
                                 >
                                     <SwiperSlide className='item productItem'>
+                                        <ProductItem />
+                                    </SwiperSlide>
+{/* 
+                                    <SwiperSlide className='item productItem'>
                                         <div className='imageWrapper'>
                                             <img
                                                 src='https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/e252f32e-b4d2-4eca-b663-2a2769c526c4.jpg?ts=1708414667'
@@ -78,15 +83,14 @@ const Home = () => {
                                                 alt='Product'
                                             />
                                         </div>
-                                    </SwiperSlide>
-
-                                    <SwiperSlide className='item productItem'>
-                                        <div className='imageWrapper'>
-                                            <img
-                                                src='https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/e252f32e-b4d2-4eca-b663-2a2769c526c4.jpg?ts=1708414667'
-                                                className='w-100'
-                                                alt='Product'
-                                            />
+                                        <div className='info'>
+                                        <h4>Werther Original Caramel Hard Candies</h4>
+                                        <span className='text-success d-block'>In Stock</span>
+                                        <Rating className='mt-2 mb-2' name="read-only" value={5} readOnly size='small' precision={0.5} />
+                                        <div className='d-flex'>
+                                            <span className='oldPrice'>20.00</span>
+                                            <span className='netPrice text-danger ml-3'>14.00</span>
+                                        </div>
                                         </div>
                                     </SwiperSlide>
 
@@ -98,13 +102,64 @@ const Home = () => {
                                                 alt='Product'
                                             />
                                         </div>
+                                        <div className='info'>
+                                        <h4>Werther Original Caramel Hard Candies</h4>
+                                        <span className='text-success d-block'>In Stock</span>
+                                        <Rating className='mt-2 mb-2' name="read-only" value={5} readOnly size='small' precision={0.5} />
+                                        <div className='d-flex'>
+                                            <span className='oldPrice'>20.00</span>
+                                            <span className='netPrice text-danger ml-3'>14.00</span>
+                                        </div>
+                                        </div>
                                     </SwiperSlide>
+
+                                    <SwiperSlide className='item productItem'>
+                                        <div className='imageWrapper'>
+                                            <img
+                                                src='https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/e252f32e-b4d2-4eca-b663-2a2769c526c4.jpg?ts=1708414667'
+                                                className='w-100'
+                                                alt='Product'
+                                            />
+                                        </div>
+                                        <div className='info'>
+                                        <h4>Werther Original Caramel Hard Candies</h4>
+                                        <span className='text-success d-block'>In Stock</span>
+                                        <Rating className='mt-2 mb-2' name="read-only" value={5} readOnly size='small' precision={0.5} />
+                                        <div className='d-flex'>
+                                            <span className='oldPrice'>20.00</span>
+                                            <span className='netPrice text-danger ml-3'>14.00</span>
+                                        </div>
+                                        </div>
+                                    </SwiperSlide>
+
+                                    <SwiperSlide className='item productItem'>
+                                        <div className='imageWrapper'>
+                                            <img
+                                                src='https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/e252f32e-b4d2-4eca-b663-2a2769c526c4.jpg?ts=1708414667'
+                                                className='w-100'
+                                                alt='Product'
+                                            />
+                                        </div>
+                                        <div className='info'>
+                                        <h4>Werther Original Caramel Hard Candies</h4>
+                                        <span className='text-success d-block'>In Stock</span>
+                                        <Rating className='mt-2 mb-2' name="read-only" value={5} readOnly size='small' precision={0.5} />
+                                        <div className='d-flex'>
+                                            <span className='oldPrice'>20.00</span>
+                                            <span className='netPrice text-danger ml-3'>14.00</span>
+                                        </div>
+                                        </div>
+                                    </SwiperSlide> */}
                                 </Swiper>
                             </div>
                         </div>
                     </div>
                 </div>
+
+                
             </section>
+
+            
         </>
     );
 };

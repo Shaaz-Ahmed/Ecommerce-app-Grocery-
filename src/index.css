@@ -110,8 +110,29 @@ border-radius: 30px !important; color: #000 !important; font-weight: 600; text-t
 .viewAllBtn svg{font-size: 20px;}
 
 .productItem{width: 100%; height: auto; border: 1px solid rgb(0, 0, 0,0.1); cursor: pointer;}
-.productItem .info{padding: 15px;}
+.productItem .info{padding: 5px;}
 .productItem h4{font-size: 14px; font-weight: 600;}
 
 .productItem .info .oldPrice{font-size: 16px; font-weight: bold; color: rgba(0, 0, 0, 0.3); text-decoration: line-through;}
 .productItem .info .netPrice{font-size: 16px; font-weight: bold;}
+
+.btn {
+    font-weight: bold;
+    padding: 10px 20px;
+  }
+  .btn svg{
+    font-size: 20px;
+  }
+  
+  .btn:hover {
+    background-color: #0056b3; /* Change color on hover */
+  }
+
+  .product_row  .item{border-right: 1px solid transparent !important;}
+
+  .productItem .badge{display: inline-block; padding: 7px 10px; position: absolute; top: 10px; 
+left: 20px; z-index: 100;}
+.badge-primary{background: #2bbef9 !important;}
+
+.productItem .actions{position: absolute; top: 20px; right: 10px; z-index: 100;}
+.productItem .actions button{display: flex; align-items: center; justify-content: center; min-width: 40px !important; height: 40px !important; width: 40px !important; border: 1px solid rgba(0, 0, 0, 0.1) !important; border-radius: 50% !important; background: #fff !important;}

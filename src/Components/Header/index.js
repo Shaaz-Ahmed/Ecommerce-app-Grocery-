@@ -9,6 +9,8 @@ import { BiCartAdd } from "react-icons/bi";
 import SearchBox from './SearchBox';
 import Navigation from './Navigation';
 import { MyContext } from '../../App';
+import Stack from '@mui/material/Stack';
+
 
 const Header = () => {
     const context = useContext(MyContext);
@@ -44,19 +46,19 @@ const Header = () => {
                                 <SearchBox />
 
                                 <div className='part3 d-flex align-items-center ml-auto'>
-                                    <Typography
+                                    {/* <Typography
                                         variant="h6"
                                         className="responsive-login"
                                         style={{ fontFamily: 'Arial', color: '#6c757d', textAlign: 'center' }}
                                     >
                                         Login
-                                    </Typography>
+                                    </Typography> */}
                                 </div>
                             </Grid>
 
                             <Grid item xs={6} sm={2} className="d-flex align-items-center justify-content-end">
                                 <div className="ml-auto d-flex align-items-center">
-                                    <Button
+                                    {/* <Button
                                         className="circle1"
                                         style={{
                                             height: '40px',
@@ -72,7 +74,13 @@ const Header = () => {
                                     >
                                         <BiCartAdd style={{ fontSize: '25px', color: 'white' }} />
                                         <span style={{ marginLeft: '8px', fontSize: '16px', color: 'white' }}>CART</span>
-                                    </Button>
+                                    </Button> */}
+                                    <Stack spacing={2} direction="row">
+      <Button variant="text" className='login'>Login</Button>
+      {/* <Button variant="outlined">Outlined</Button> */}
+      <Button variant="contained" className="btn btn-primary d-flex align-items-center"> <BiCartAdd className="me-2" /> CART</Button>
+     
+    </Stack>
                                 </div>
                             </Grid>
                         </Grid>
