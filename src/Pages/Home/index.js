@@ -31,6 +31,9 @@ const Home = () => {
                                 <img src={banner1} alt="Banner" className='cursor' />
                             </div>
                         </div>
+
+                        {/* ......... */}
+                        
                         <div className='col-md-9 productRow'>
                             <div className='d-flex align-items-center'>
                                 <div className='info w-75'>
@@ -55,103 +58,72 @@ const Home = () => {
                                     <SwiperSlide className='item productItem'>
                                         <ProductItem />
                                     </SwiperSlide>
-{/* 
+
                                     <SwiperSlide className='item productItem'>
-                                        <div className='imageWrapper'>
-                                            <img
-                                                src='https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/e252f32e-b4d2-4eca-b663-2a2769c526c4.jpg?ts=1708414667'
-                                                className='w-100'
-                                                alt='Product'
-                                            />
-                                        </div>
-                                        <div className='info'>
-                                        <h4>Werther Original Caramel Hard Candies</h4>
-                                        <span className='text-success d-block'>In Stock</span>
-                                        <Rating className='mt-2 mb-2' name="read-only" value={5} readOnly size='small' precision={0.5} />
-                                        <div className='d-flex'>
-                                            <span className='oldPrice'>20.00</span>
-                                            <span className='netPrice text-danger ml-3'>14.00</span>
-                                        </div>
-                                        </div>
+                                        <ProductItem />
                                     </SwiperSlide>
 
                                     <SwiperSlide className='item productItem'>
-                                        <div className='imageWrapper'>
-                                            <img
-                                                src='https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/e252f32e-b4d2-4eca-b663-2a2769c526c4.jpg?ts=1708414667'
-                                                className='w-100'
-                                                alt='Product'
-                                            />
-                                        </div>
-                                        <div className='info'>
-                                        <h4>Werther Original Caramel Hard Candies</h4>
-                                        <span className='text-success d-block'>In Stock</span>
-                                        <Rating className='mt-2 mb-2' name="read-only" value={5} readOnly size='small' precision={0.5} />
-                                        <div className='d-flex'>
-                                            <span className='oldPrice'>20.00</span>
-                                            <span className='netPrice text-danger ml-3'>14.00</span>
-                                        </div>
-                                        </div>
+                                        <ProductItem />
                                     </SwiperSlide>
 
                                     <SwiperSlide className='item productItem'>
-                                        <div className='imageWrapper'>
-                                            <img
-                                                src='https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/e252f32e-b4d2-4eca-b663-2a2769c526c4.jpg?ts=1708414667'
-                                                className='w-100'
-                                                alt='Product'
-                                            />
-                                        </div>
-                                        <div className='info'>
-                                        <h4>Werther Original Caramel Hard Candies</h4>
-                                        <span className='text-success d-block'>In Stock</span>
-                                        <Rating className='mt-2 mb-2' name="read-only" value={5} readOnly size='small' precision={0.5} />
-                                        <div className='d-flex'>
-                                            <span className='oldPrice'>20.00</span>
-                                            <span className='netPrice text-danger ml-3'>14.00</span>
-                                        </div>
-                                        </div>
+                                        <ProductItem />
                                     </SwiperSlide>
 
                                     <SwiperSlide className='item productItem'>
-                                        <div className='imageWrapper'>
-                                            <img
-                                                src='https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/e252f32e-b4d2-4eca-b663-2a2769c526c4.jpg?ts=1708414667'
-                                                className='w-100'
-                                                alt='Product'
-                                            />
-                                        </div>
-                                        <div className='info'>
-                                        <h4>Werther Original Caramel Hard Candies</h4>
-                                        <span className='text-success d-block'>In Stock</span>
-                                        <Rating className='mt-2 mb-2' name="read-only" value={5} readOnly size='small' precision={0.5} />
-                                        <div className='d-flex'>
-                                            <span className='oldPrice'>20.00</span>
-                                            <span className='netPrice text-danger ml-3'>14.00</span>
-                                        </div>
-                                        </div>
+                                        <ProductItem />
                                     </SwiperSlide>
 
-                                    <SwiperSlide className='item productItem'>
-                                        <div className='imageWrapper'>
-                                            <img
-                                                src='https://cdn.grofers.com/cdn-cgi/image/f=auto,fit=scale-down,q=70,metadata=none,w=270/app/assets/products/sliding_images/jpeg/e252f32e-b4d2-4eca-b663-2a2769c526c4.jpg?ts=1708414667'
-                                                className='w-100'
-                                                alt='Product'
-                                            />
-                                        </div>
-                                        <div className='info'>
-                                        <h4>Werther Original Caramel Hard Candies</h4>
-                                        <span className='text-success d-block'>In Stock</span>
-                                        <Rating className='mt-2 mb-2' name="read-only" value={5} readOnly size='small' precision={0.5} />
-                                        <div className='d-flex'>
-                                            <span className='oldPrice'>20.00</span>
-                                            <span className='netPrice text-danger ml-3'>14.00</span>
-                                        </div>
-                                        </div>
-                                    </SwiperSlide> */}
                                 </Swiper>
                             </div>
+
+
+
+
+                            <div className='d-flex align-items-center'>
+                                <div className='info w-75'>
+                                    <h3 className='mb-0 hd'>BEST SELLER</h3>
+                                    <p className='text-light text-sml mb-0'>Do not miss the current offer until the end of the month</p>
+                                </div>
+                                <Button className='viewAllBtn ml-auto'>
+                                    View all <IoIosArrowRoundForward />
+                                </Button>
+                            </div>
+
+                            <div className='product_row w-100 mt-4'>
+                                <Swiper
+                                    slidesPerView={3}
+                                    spaceBetween={30}
+                                    pagination={{
+                                        clickable: true,
+                                    }}
+                                    modules={[Pagination]} // Add Swiper's Pagination module
+                                    className='mySwiper'
+                                >
+                                    <SwiperSlide className='item productItem'>
+                                        <ProductItem />
+                                    </SwiperSlide>
+
+                                    <SwiperSlide className='item productItem'>
+                                        <ProductItem />
+                                    </SwiperSlide>
+
+                                    <SwiperSlide className='item productItem'>
+                                        <ProductItem />
+                                    </SwiperSlide>
+
+                                    <SwiperSlide className='item productItem'>
+                                        <ProductItem />
+                                    </SwiperSlide>
+
+                                    <SwiperSlide className='item productItem'>
+                                        <ProductItem />
+                                    </SwiperSlide>
+
+                                </Swiper>
+                            </div>
+
                         </div>
                     </div>
                 </div>
