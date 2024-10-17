@@ -30,6 +30,9 @@ const ProductItem = () =>{
                                             <span className='netPrice text-danger ml-3'>14.00</span>
                                         </div>
                                         </div>
+
+
+                                        
         </>
     )
 };

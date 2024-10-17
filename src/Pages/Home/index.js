@@ -1,6 +1,7 @@
 import React from 'react';
 import HomeBanners from "../../Components/HomeBanners";
 import banner1 from '../../assets/images/banner1.jpg';
+import banner2 from '../../assets/images/banner2.jpg';
 import Button from '@mui/material/Button';
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -8,6 +9,7 @@ import 'swiper/css';
 import 'swiper/css/pagination'; // Swiper's pagination CSS
 import { Pagination } from 'swiper/modules'; // Correct import for Swiper's Pagination module
 import ProductItem from '../../Components/ProductItem';
+import HomeCat from '../../Components/HomeCat';
 
 
 const Home = () => {
@@ -22,6 +24,7 @@ const Home = () => {
     return (
         <>
             <HomeBanners />
+            <HomeCat />
 
             <section className='homeProducts'>
                 <div className='container'>
@@ -29,6 +32,10 @@ const Home = () => {
                         <div className='col-md-3'>
                             <div className='banner'>
                                 <img src={banner1} alt="Banner" className='cursor' />
+                            </div>
+
+                            <div className='banner mt-4'>
+                                <img src={banner2} alt="Banner" className='cursor' />
                             </div>
                         </div>
 
@@ -81,10 +88,10 @@ const Home = () => {
 
 
 
-                            <div className='d-flex align-items-center'>
+                            <div className='d-flex align-items-center mt-5'>
                                 <div className='info w-75'>
-                                    <h3 className='mb-0 hd'>BEST SELLER</h3>
-                                    <p className='text-light text-sml mb-0'>Do not miss the current offer until the end of the month</p>
+                                    <h3 className='mb-0 hd'>New Products</h3>
+                                    <p className='text-light text-sml mb-0'>New product with updated stock</p>
                                 </div>
                                 <Button className='viewAllBtn ml-auto'>
                                     View all <IoIosArrowRoundForward />
