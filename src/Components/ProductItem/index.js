@@ -2,6 +2,7 @@ import Rating from '@mui/material/Rating';
 import Button from '@mui/material/Button';
 import { TfiFullscreen } from "react-icons/tfi";
 import { IoMdHeartEmpty } from "react-icons/io";
+import Chips from '../../assets/images/chipsj.png';
 
 
 

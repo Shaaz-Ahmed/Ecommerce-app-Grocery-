@@ -10,6 +10,7 @@ import SearchBox from './SearchBox';
 import Navigation from './Navigation';
 import { MyContext } from '../../App';
 import Stack from '@mui/material/Stack';
+import { IoMdNotificationsOutline } from "react-icons/io";
 
 
 const Header = () => {
@@ -76,8 +77,8 @@ const Header = () => {
                                         <span style={{ marginLeft: '8px', fontSize: '16px', color: 'white' }}>CART</span>
                                     </Button> */}
                                     <Stack spacing={2} direction="row">
-      <Button variant="text" className='login'>Login</Button>
-      {/* <Button variant="outlined">Outlined</Button> */}
+      
+                                    <Button variant="text" className='login'>Login</Button>
       <Button variant="contained" className="btn btn-primary d-flex align-items-center"> <BiCartAdd className="me-2" /> CART</Button>
      
     </Stack>

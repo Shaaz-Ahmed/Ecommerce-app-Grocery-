@@ -4,7 +4,7 @@ const SearchBox = () => {
     return (
         <>
           <div className="headerSearch d-flex align-items-center ml-3">
-                                    <div className="input-group" style={{ width: '450px', height: '50px' }}>
+                                    <div className="input-group" style={{ width: '600px', height: '50px' }}>
                                         <input 
                                             type="text" 
                                             className="form-control" 

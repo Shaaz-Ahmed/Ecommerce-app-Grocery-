@@ -10,6 +10,9 @@ import 'swiper/css/pagination'; // Swiper's pagination CSS
 import { Pagination } from 'swiper/modules'; // Correct import for Swiper's Pagination module
 import ProductItem from '../../Components/ProductItem';
 import HomeCat from '../../Components/HomeCat';
+import banner3 from '../../assets/images/banner3.jpg';
+import banner4 from '../../assets/images/banner4.jpg';
+
 
 
 const Home = () => {
@@ -98,6 +101,9 @@ const Home = () => {
                                 </Button>
                             </div>
 
+                            
+                        
+
                             <div className='product_row w-100 mt-4'>
                                 <Swiper
                                     slidesPerView={3}
@@ -131,6 +137,15 @@ const Home = () => {
                                 </Swiper>
                             </div>
 
+                            <div className='d-flex'>
+                                    <div className='banner mt-4'>
+                                        <img src={banner3}/>
+                                    </div>
+
+                                    <div className='banner mt-4'>
+                                        <img src={banner4}/>
+                                    </div>
+                            </div>
                         </div>
                     </div>
                 </div>
